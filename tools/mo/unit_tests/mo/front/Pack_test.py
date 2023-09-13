@@ -35,7 +35,8 @@ nodes_attributes = {
 
 class TestPackTest():
 
-    @pytest.mark.parametrize("num_inputs, num_placeholders, axis", [(2, 2, 0), (3, 3, 0), (4, 4, 0), (4, 4, 1), (4, 1, 0), (4, 1, 1)])
+    @pytest.mark.parametrize("num_inputs, num_placeholders, axis", [(2, 2, 0), (3, 3, 0), (4, 4, 0),
+                                                                    (4, 4, 1), (4, 1, 0), (4, 1, 1)])
     def test_pack_test_all(self, num_inputs: int, num_placeholders: int, axis: list):
 
         graph_edges = []
