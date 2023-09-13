@@ -44,7 +44,8 @@ class TestConcatPartialInfer():
         res_shape = graph.node['node_3']['shape']
         assert strict_compare_tensors(output_shape, res_shape)
 
-    @pytest.mark.parametrize("value1, value2, output_value, axis",[(shape_array([1]), shape_array([4]), shape_array([1, 4]), 0),
+    @pytest.mark.parametrize("value1, value2, output_value, axis",[(shape_array([1]),
+                    shape_array([4]), shape_array([1, 4]), 0),
                 (shape_array([dynamic_dimension_value]), shape_array([4]),
                  shape_array([dynamic_dimension_value, 4]), -1),
                 ])
